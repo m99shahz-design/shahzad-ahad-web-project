@@ -1,0 +1,386 @@
+<main class="page-wrapper checkout-page" style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#ffffff; color:#111827;">
+  <!-- HERO -->
+  <section class="page-hero" style="background:#f7f7f7; border-bottom:1px solid #e5e7eb; padding:56px 0 36px;">
+    <div class="container" style="max-width:1200px; margin:0 auto; padding:0 20px;">
+      <p class="page-hero-subtitle" style="margin:0 0 10px; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#6b7280;">
+        Almost there
+      </p>
+      <h1 class="page-hero-title" style="margin:0; font-size:38px; line-height:1.1; font-weight:800; color:#111827;">
+        Checkout
+      </h1>
+    </div>
+  </section>
+
+  <!-- TOP PROMO BAR (like image) -->
+<div style="background:#0b0b0b; color:#ffffff; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;">
+  <div style="max-width:1200px; margin:0 auto; padding:6px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px;">
+    <div style="font-size:12px; opacity:.95;">
+      New season sale is live — enjoy up to <b>50% OFF</b> on selected styles!
+    </div>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a href="#" style="color:#fff; text-decoration:none; font-size:14px;"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" style="color:#fff; text-decoration:none; font-size:14px;"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" style="color:#fff; text-decoration:none; font-size:14px;"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER (like image) -->
+<header class="header" style="background:#ffffff; border-bottom:1px solid #e5e7eb; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;">
+  <div class="container header-inner"
+       style="max-width:1200px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:18px;">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo"
+       style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#111827; min-width:170px;">
+      <span class="logo-icon"
+            style="width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; border:1px solid #e5e7eb;">
+        <i class="fa-solid fa-bag-shopping" style="font-size:14px;"></i>
+      </span>
+      <span class="logo-text" style="font-weight:800; letter-spacing:.5px; text-transform:uppercase; font-size:13px;">
+        Shahz&amp;Ahd
+      </span>
+    </a>
+
+    <!-- Nav (center like image) -->
+    <nav class="nav" id="mainNav"
+         style="display:flex; align-items:center; justify-content:center; gap:28px; flex:1; white-space:nowrap;">
+      <a href="index.html" class="nav-home"
+         style="text-decoration:none; color:#111827; font-size:13px; letter-spacing:.8px; text-transform:uppercase; font-weight:700; opacity:.85;">
+        Home
+      </a>
+      <a href="shop.html" class="nav-products"
+         style="text-decoration:none; color:#111827; font-size:13px; letter-spacing:.8px; text-transform:uppercase; font-weight:700; opacity:.85;">
+        Products
+      </a>
+      <a href="about.html" class="nav-about"
+         style="text-decoration:none; color:#111827; font-size:13px; letter-spacing:.8px; text-transform:uppercase; font-weight:700; opacity:.85;">
+        About Us
+      </a>
+      <a href="news.html" class="nav-news"
+         style="text-decoration:none; color:#111827; font-size:13px; letter-spacing:.8px; text-transform:uppercase; font-weight:700; opacity:.85;">
+        News
+      </a>
+      <a href="contact.html" class="nav-contact active"
+         style="text-decoration:none; color:#111827; font-size:13px; letter-spacing:.8px; text-transform:uppercase; font-weight:800; opacity:1; position:relative;">
+        Contact
+        <span style="position:absolute; left:0; right:0; bottom:-10px; height:2px; background:#111827; border-radius:999px;"></span>
+      </a>
+    </nav>
+
+    <!-- Actions (right like image) -->
+    <div class="header-actions" style="display:flex; align-items:center; gap:10px; min-width:170px; justify-content:flex-end;">
+      <button class="icon-btn" aria-label="Search"
+              style="width:38px; height:38px; border-radius:999px; border:1px solid transparent; background:transparent; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#111827;">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <a href="login.html" class="icon-btn" title="Login"
+         style="width:38px; height:38px; border-radius:999px; border:1px solid transparent; background:transparent; display:flex; align-items:center; justify-content:center; color:#111827; text-decoration:none;">
+        <i class="fa-regular fa-user"></i>
+      </a>
+
+      <button class="icon-btn" aria-label="Wishlist"
+              style="width:38px; height:38px; border-radius:999px; border:1px solid transparent; background:transparent; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#111827;">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+
+      <a href="cart.html" class="icon-btn cart-btn" title="Cart"
+         style="width:38px; height:38px; border-radius:999px; border:1px solid transparent; background:transparent; display:flex; align-items:center; justify-content:center; color:#111827; text-decoration:none; position:relative;">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount"
+              style="position:absolute; top:5px; right:4px; width:16px; height:16px; border-radius:999px;
+                     background:#e53935; color:#fff; font-size:10px; display:flex; align-items:center; justify-content:center; font-weight:800;">
+          0
+        </span>
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"
+              style="width:40px; height:40px; border-radius:10px; border:1px solid #e5e7eb; background:#fff; cursor:pointer; display:none; align-items:center; justify-content:center; color:#111827;">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav (hidden by default) -->
+  <div id="mobileNav"
+       style="display:none; border-top:1px solid #e5e7eb; background:#ffffff;">
+    <div style="max-width:1200px; margin:0 auto; padding:12px 20px; display:flex; flex-direction:column; gap:10px;">
+      <a href="index.html" style="text-decoration:none; color:#111827; font-weight:700; text-transform:uppercase; letter-spacing:.8px; font-size:13px; padding:10px 0;">Home</a>
+      <a href="shop.html"  style="text-decoration:none; color:#111827; font-weight:700; text-transform:uppercase; letter-spacing:.8px; font-size:13px; padding:10px 0;">Products</a>
+      <a href="about.html" style="text-decoration:none; color:#111827; font-weight:700; text-transform:uppercase; letter-spacing:.8px; font-size:13px; padding:10px 0;">About Us</a>
+      <a href="news.html"  style="text-decoration:none; color:#111827; font-weight:700; text-transform:uppercase; letter-spacing:.8px; font-size:13px; padding:10px 0;">News</a>
+      <a href="contact.html" style="text-decoration:none; color:#111827; font-weight:800; text-transform:uppercase; letter-spacing:.8px; font-size:13px; padding:10px 0;">Contact</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Simple responsive behavior: show hamburger on small screens + toggle menu
+  (function () {
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("mainNav");
+    const mobile = document.getElementById("mobileNav");
+
+    function applyResponsive() {
+      const isSmall = window.innerWidth <= 820;
+      if (isSmall) {
+        toggle.style.display = "flex";
+        nav.style.display = "none";
+      } else {
+        toggle.style.display = "none";
+        nav.style.display = "flex";
+        mobile.style.display = "none";
+      }
+    }
+
+    toggle.addEventListener("click", () => {
+      mobile.style.display = (mobile.style.display === "none" || !mobile.style.display) ? "block" : "none";
+    });
+
+    window.addEventListener("resize", applyResponsive);
+    applyResponsive();
+  })();
+</script>
+
+
+  <!-- CONTENT -->
+  <section class="section" style="padding:46px 0 70px;">
+    <div class="container checkout-layout" style="max-width:1200px; margin:0 auto; padding:0 20px; display:flex; gap:34px; align-items:flex-start; flex-wrap:wrap;">
+      <!-- FORM -->
+      <form class="checkout-form" style="flex: 1 1 620px; background:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:28px; box-shadow:0 10px 28px rgba(17,24,39,.06);">
+        <h3 style="margin:0 0 22px; font-size:20px; font-weight:800; color:#111827;">Billing details</h3>
+
+        <!-- ROW 2 -->
+        <div class="form-row two" style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:16px;">
+          <div class="form-field" style="flex:1 1 240px; display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:13px; font-weight:700; color:#111827;">First name</label>
+            <input type="text" required
+              style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none;" />
+          </div>
+          <div class="form-field" style="flex:1 1 240px; display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:13px; font-weight:700; color:#111827;">Last name</label>
+            <input type="text" required
+              style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none;" />
+          </div>
+        </div>
+
+        <div class="form-field" style="display:flex; flex-direction:column; gap:6px; margin-bottom:16px;">
+          <label style="font-size:13px; font-weight:700; color:#111827;">Country</label>
+          <select required
+            style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none; appearance:none;">
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Pakistan</option>
+          </select>
+        </div>
+
+        <div class="form-field" style="display:flex; flex-direction:column; gap:6px; margin-bottom:16px;">
+          <label style="font-size:13px; font-weight:700; color:#111827;">Street address</label>
+          <input type="text" placeholder="House number and street name" required
+            style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none;" />
+          <small style="margin-top:4px; color:#6b7280; font-size:12px;">We’ll use this to deliver your order.</small>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="form-row two" style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:16px;">
+          <div class="form-field" style="flex:1 1 240px; display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:13px; font-weight:700; color:#111827;">Town / City</label>
+            <input type="text" required
+              style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none;" />
+          </div>
+          <div class="form-field" style="flex:1 1 240px; display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:13px; font-weight:700; color:#111827;">Postcode / ZIP</label>
+            <input type="text" required
+              style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none;" />
+          </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="form-row two" style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:16px;">
+          <div class="form-field" style="flex:1 1 240px; display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:13px; font-weight:700; color:#111827;">Phone</label>
+            <input type="tel" required
+              style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none;" />
+          </div>
+          <div class="form-field" style="flex:1 1 240px; display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:13px; font-weight:700; color:#111827;">Email address</label>
+            <input type="email" required
+              style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none;" />
+          </div>
+        </div>
+
+        <div class="form-field" style="display:flex; flex-direction:column; gap:6px; margin-bottom:0;">
+          <label style="font-size:13px; font-weight:700; color:#111827;">Order notes (optional)</label>
+          <textarea rows="4" placeholder="Notes about your order..."
+            style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; font-size:14px; color:#111827; background:#fff; outline:none; resize:vertical;"></textarea>
+        </div>
+      </form>
+
+      <!-- SUMMARY -->
+      <aside class="order-summary" style="flex: 0 0 360px; background:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:24px; box-shadow:0 10px 28px rgba(17,24,39,.06); position:sticky; top:18px;">
+        <h3 style="margin:0 0 18px; font-size:20px; font-weight:800; color:#111827;">Your order</h3>
+
+        <div class="summary-row" style="display:flex; justify-content:space-between; gap:14px; padding:12px 0; border-bottom:1px solid #e5e7eb; font-size:14px; color:#111827;">
+          <span style="color:#111827;">Snapback Cap × 1</span>
+          <span style="font-weight:700;">$30.00</span>
+        </div>
+
+        <div class="summary-row" style="display:flex; justify-content:space-between; gap:14px; padding:12px 0; border-bottom:1px solid #e5e7eb; font-size:14px; color:#111827;">
+          <span style="color:#6b7280;">Subtotal</span>
+          <span style="font-weight:700;">$30.00</span>
+        </div>
+
+        <div class="summary-row" style="display:flex; justify-content:space-between; gap:14px; padding:12px 0; border-bottom:1px solid #e5e7eb; font-size:14px; color:#111827;">
+          <span style="color:#6b7280;">Shipping</span>
+          <span style="font-weight:700;">Free</span>
+        </div>
+
+        <div class="summary-row total" style="display:flex; justify-content:space-between; gap:14px; padding:14px 0 8px; font-size:18px; font-weight:900; color:#111827;">
+          <span>Total</span>
+          <span>$30.00</span>
+        </div>
+
+        <div class="payment-methods" style="margin:18px 0 18px; padding:14px; border:1px solid #e5e7eb; border-radius:14px; background:#fafafa;">
+          <label style="display:flex; align-items:center; gap:10px; margin:8px 0; font-size:14px; color:#111827;">
+            <input type="radio" name="pay" checked style="accent-color:#e53935;" />
+            Cash on delivery
+          </label>
+          <label style="display:flex; align-items:center; gap:10px; margin:8px 0; font-size:14px; color:#111827;">
+            <input type="radio" name="pay" style="accent-color:#e53935;" />
+            Credit / Debit card
+          </label>
+          <label style="display:flex; align-items:center; gap:10px; margin:8px 0; font-size:14px; color:#111827;">
+            <input type="radio" name="pay" style="accent-color:#e53935;" />
+            PayPal
+          </label>
+        </div>
+
+        <!-- ✅ BUTTON (add id) -->
+<button id="placeOrderBtn" class="btn btn-primary full-width"
+  style="width:100%; border:none; cursor:pointer; padding:14px 18px; border-radius:999px; font-size:14px; font-weight:800; background:#e53935; color:#ffffff; box-shadow:0 10px 18px rgba(229,57,53,.22);">
+  Place order
+</button>
+
+<!-- ✅ TOAST / NOTIFICATION (add once in page, best near end of body) -->
+<div id="toast"
+  style="
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 9999;
+    min-width: 280px;
+    max-width: 360px;
+    padding: 14px 14px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    box-shadow: 0 14px 30px rgba(17,24,39,.18);
+    display: none;
+    align-items: flex-start;
+    gap: 10px;
+  ">
+  <div id="toastDot"
+    style="margin-top:5px; width:10px; height:10px; border-radius:999px; background:#e53935;"></div>
+
+  <div style="flex:1;">
+    <div id="toastTitle" style="font-weight:800; color:#111827; font-size:14px; line-height:1.2;">
+      Order placed
+    </div>
+    <div id="toastMsg" style="margin-top:4px; color:#6b7280; font-size:13px; line-height:1.35;">
+      Thanks! Your order has been received.
+    </div>
+  </div>
+
+  <button id="toastClose"
+    style="border:none; background:transparent; cursor:pointer; color:#6b7280; font-size:18px; line-height:1; padding:0 4px;">
+    ×
+  </button>
+</div>
+
+<script>
+  (function () {
+    const btn = document.getElementById("placeOrderBtn");
+    const toast = document.getElementById("toast");
+    const toastTitle = document.getElementById("toastTitle");
+    const toastMsg = document.getElementById("toastMsg");
+    const toastClose = document.getElementById("toastClose");
+
+    let toastTimer = null;
+
+    function showToast(title, message, type = "success") {
+      // type: success | error | info
+      const dotColor = type === "error" ? "#b91c1c" : (type === "info" ? "#111827" : "#e53935");
+      document.getElementById("toastDot").style.background = dotColor;
+
+      toastTitle.textContent = title;
+      toastMsg.textContent = message;
+
+      toast.style.display = "flex";
+      toast.style.opacity = "0";
+      toast.style.transform = "translateY(-6px)";
+
+      requestAnimationFrame(() => {
+        toast.style.transition = "opacity 220ms ease, transform 220ms ease";
+        toast.style.opacity = "1";
+        toast.style.transform = "translateY(0)";
+      });
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(hideToast, 2600);
+    }
+
+    function hideToast() {
+      if (toast.style.display !== "flex") return;
+      toast.style.opacity = "0";
+      toast.style.transform = "translateY(-6px)";
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 220);
+    }
+
+    toastClose.addEventListener("click", hideToast);
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault(); // ✅ stop form submit / page reload
+
+      // Optional: basic check (shows error toast if any required fields empty)
+      const form = document.querySelector(".checkout-form");
+      const required = form.querySelectorAll("input[required], select[required]");
+      for (const el of required) {
+        if (!el.value || !String(el.value).trim()) {
+          showToast("Missing details", "Please fill all required fields.", "error");
+          el.focus();
+          return;
+        }
+      }
+
+      // Button loading effect
+      const oldText = btn.textContent;
+      btn.textContent = "Placing order...";
+      btn.disabled = true;
+      btn.style.opacity = "0.85";
+      btn.style.cursor = "not-allowed";
+
+      // Fake API delay (replace with real fetch later)
+      setTimeout(() => {
+        btn.textContent = oldText;
+        btn.disabled = false;
+        btn.style.opacity = "1";
+        btn.style.cursor = "pointer";
+
+        showToast("Order placed", "Thanks! Your order has been received.", "success");
+      }, 900);
+    });
+  })();
+</script>
+
+
+        <p style="margin:12px 0 0; font-size:12px; color:#6b7280; line-height:1.5;">
+          By placing your order, you agree to our terms. Secure checkout and smooth delivery.
+        </p>
+      </aside>
+    </div>
+  </section>
+</main>

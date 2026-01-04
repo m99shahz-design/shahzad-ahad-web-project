@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Shahz&Ahd</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Accessibility: skip link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <button class="accessibility-icon" aria-label="Accessibility icon">
+    <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+  </button>
+
+  <!-- TOP BAR (same as home) -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <p>New season sale is live – enjoy up to <strong>50% OFF</strong> on selected styles!</p>
+      <div class="top-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER (same as home, Contact active) -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
+        <span class="logo-text">Shahz&Ahd</span>
+      </div>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="shop.html" class="nav-products">Products</a>
+        <a href="about.html" class="nav-about">About Us</a>
+        <a href="news.html" class="nav-news">News</a>
+        <a href="contact.html" class="nav-contact active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-search" role="search">
+          <button class="icon-btn header-search-toggle" aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <form class="header-search-form">
+            <input
+              type="search"
+              placeholder="Search by product or category..."
+              aria-label="Search products" />
+          </form>
+        </div>
+
+        <a href="login.html" class="icon-btn" title="Login" aria-label="Login">
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <a href="cart.html" class="icon-btn cart-btn" title="Cart" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent">
+
+    <section class="section">
+      <div class="container">
+
+        <h1 class="contact-page-title">Contact Us</h1>
+
+        <div class="contact-layout">
+          <!-- LEFT: FORM CARD -->
+          <div class="contact-card">
+            <form class="contact-form">
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your Name" required />
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Your Email" required />
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Your Message"
+                  required></textarea>
+                <small id="messageCounter" class="field-help">0/250 words</small>
+              </div>
+
+              <button type="submit" class="btn btn-primary contact-submit-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- RIGHT: LOCATION CARD + INFO -->
+          <div class="location-wrapper">
+            <h2 class="location-heading">Our Location</h2>
+
+            <div class="location-card">
+              <i class="fa-solid fa-location-dot location-icon" aria-hidden="true"></i>
+              <p class="location-name">Shahz&Ahd Store</p>
+              <p class="location-address">
+                Near University of Sargodha<br />
+                Sargodha, Pakistan
+              </p>
+            </div>
+
+            <ul class="location-info-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Near University of Sargodha, Sargodha, Pakistan</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>+92-300-0000000</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>support@shahz-ahd.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (same as home) -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 – Shahz&Ahd project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- 250-word limit for message -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const messageField = document.getElementById('message');
+      const counter = document.getElementById('messageCounter');
+      if (!messageField || !counter) return;
+
+      function updateCount() {
+        let text = messageField.value.trim();
+        let words = text.length ? text.split(/\s+/).filter(Boolean) : [];
+
+        if (words.length > 250) {
+          words = words.slice(0, 250);
+          messageField.value = words.join(' ');
+        }
+
+        counter.textContent = words.length + '/250 words';
+      }
+
+      messageField.addEventListener('input', updateCount);
+      updateCount();
+    });
+  </script>
+</body>
+</html>

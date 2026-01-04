@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Behind the Scenes: Fabric Selection – Shahz&Ahd</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER + TOP BAR -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <button class="accessibility-icon" aria-label="Accessibility icon">
+    <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+  </button>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <p>New season sale is live – enjoy up to <strong>50% OFF</strong> on selected styles!</p>
+      <div class="top-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+        <span class="logo-text">Shahz&Ahd</span>
+      </div>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="shop.html" class="nav-products">Products</a>
+        <a href="about.html" class="nav-about">About Us</a>
+        <a href="news.html" class="nav-news active">News</a>
+        <a href="contact.html" class="nav-contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-search">
+          <button class="icon-btn header-search-toggle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <form class="header-search-form">
+            <input type="search" placeholder="Search by product or category..." />
+          </form>
+        </div>
+
+        <a href="login.html" class="icon-btn">
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <button class="icon-btn">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <a href="cart.html" class="icon-btn cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="mainContent">
+    <section class="section">
+      <div class="container article-container">
+
+        <p class="section-subtitle">Brand News</p>
+        <h1 class="article-title">Behind the Scenes: How We Choose Fabrics</h1>
+        <p class="blog-meta">IN BRAND NEWS • Dec 05, 2025</p>
+
+        <img src="images/blog-1.jpg" class="article-image" alt="Fabric testing process" />
+
+        <p>
+          Every piece in the Shahz&Ahd collection starts with fabric. Before we think about cuts, colours
+          or details, we test how a material feels, moves and survives everyday wear.
+        </p>
+
+        <p>
+          We look for softness, durability and structure. The fabric has to feel good on the skin, hold its
+          shape after multiple washes and still look sharp after a long day of use.
+        </p>
+
+        <p>
+          Our team runs wash tests, stretch tests and real-life trials — wearing samples to class, work,
+          and hangouts. If a fabric pills too fast, loses its colour or feels rough, it doesn’t make the cut.
+        </p>
+
+        <p>
+          This process takes longer, but it’s worth it. It’s how we make sure the hoodie you love today still
+          feels great months from now.
+        </p>
+
+        <p>
+          For us, quality isn’t a marketing word. It’s a decision at every step: from fabric rolls to the
+          final piece you add to your wardrobe.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 – Shahz&Ahd project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

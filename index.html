@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahz&Ahd – Online Fashion Store</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+
+  
+</head>
+<body>
+
+<button
+  id="eyeComfortToggle"
+  class="eyecomfort-btn"
+  aria-label="Eye comfort mode"
+  aria-pressed="false"
+>
+  👁
+</button>
+
+
+  <!-- Accessibility: skip link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <button class="accessibility-icon" aria-label="Accessibility icon">
+    <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+  </button>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <p>New season sale is live – enjoy up to <strong>50% OFF</strong> on selected styles!</p>
+      <div class="top-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
+        <span class="logo-text">Shahz&Ahd</span>
+      </div>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+  <a href="index.html" class="nav-home active">Home</a>
+  <a href="shop.html" class="nav-products">Products</a>
+  <a href="about.html" class="nav-about">About Us</a>
+  <a href="news.html" class="nav-news">News</a>
+
+  <a href="contact.html" class="nav-contact">Contact</a>
+</nav>
+
+
+      <div class="header-actions">
+
+        <!-- SEARCH BAR WITH ICON (EXPANDS) -->
+        <div class="header-search" role="search">
+          <button class="icon-btn header-search-toggle" aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <form class="header-search-form">
+            <input
+              type="search"
+              placeholder="Search by product or category..."
+              aria-label="Search products" />
+          </form>
+        </div>
+
+        <!-- LOGIN REDIRECT -->
+        <a href="login.html" class="icon-btn" title="Login" aria-label="Login">
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <!-- WISHLIST -->
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <!-- CART REDIRECT -->
+        <a href="cart.html" class="icon-btn cart-btn" title="Cart" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT FOR ACCESSIBILITY -->
+  <main id="mainContent">
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">New Season • New Style</p>
+          <h1 id="heroTitle">Dress Your<br />Everyday Story</h1>
+          <p class="hero-desc">
+            Discover hand-picked pieces for real life – from everyday basics to statement looks.
+            Shop trusted quality, clean designs and styles that actually feel good to wear.
+          </p>
+
+          <ul class="hero-features">
+            <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Curated brands you can trust</li>
+            <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Premium fabrics & finishing</li>
+            <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Fast, free delivery over $80</li>
+          </ul>
+
+          <a href="shop.html" class="btn btn-primary">Shop the collection</a>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <img src="images/hero.jpg" alt="Brand New Collection" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES STRIP -->
+    <section class="services-strip" id="services">
+      <div class="container services-strip-inner">
+        <div class="service-item">
+          <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
+          <div>
+            <h4>Secure Payment</h4>
+            <p>Safe checkout with leading payment partners.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>
+          <div>
+            <h4>Easy 30-Day Returns</h4>
+            <p>Not in love? Send it back, no stress.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-headset" aria-hidden="true"></i>
+          <div>
+            <h4>24/7 Support</h4>
+            <p>Real help from our support team anytime.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+          <div>
+            <h4>Free Delivery</h4>
+            <p>Free shipping on orders over $80.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW ARRIVALS -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-header center">
+          <p class="section-subtitle">Fresh styles just dropped</p>
+          <h2 class="section-title">New Arrivals</h2>
+          <a href="shop.html" class="btn btn-outline small">View all products</a>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <span class="badge badge-sale">Sale</span>
+            <div class="product-image">
+              <!-- UPDATED: add id=1 -->
+              <a href="product.html?id=1">
+                <img src="images/cap-1.jpg" alt="Snapback Cap" />
+              </a>
+            </div>
+            <h3 class="product-name">
+              <a href="product.html?id=1">Snapback Cap</a>
+            </h3>
+            <div class="product-price-row">
+              <span class="price-new">$30.00</span>
+              <span class="price-old">$45.00</span>
+            </div>
+            <p class="product-category">Accessories</p>
+            <div class="product-rating" aria-label="4 out of 5 stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <!-- UPDATED: add id=2 -->
+              <a href="product.html?id=2">
+                <img src="images/shoes-1.jpg" alt="Gray Shoes" />
+              </a>
+            </div>
+            <h3 class="product-name">
+              <a href="product.html?id=2">Gray Everyday Sneakers</a>
+            </h3>
+            <div class="product-price-row">
+              <span class="price-new">$50.00</span>
+            </div>
+            <p class="product-category">Sneakers</p>
+            <div class="product-rating" aria-label="3.5 out of 5 stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge-sale">Sale</span>
+            <div class="product-image">
+              <!-- UPDATED: add id=3 -->
+              <a href="product.html?id=3">
+                <img src="images/tshirt-1.jpg" alt="Black T-shirt" />
+              </a>
+            </div>
+            <h3 class="product-name">
+              <a href="product.html?id=3">Essential Black T-Shirt</a>
+            </h3>
+            <div class="product-price-row">
+              <span class="price-new">$50.00</span>
+              <span class="price-old">$80.00</span>
+            </div>
+            <p class="product-category">T-Shirts</p>
+            <div class="product-rating" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge-sale">Sale</span>
+            <div class="product-image">
+              <!-- UPDATED: add id=4 -->
+              <a href="product.html?id=4">
+                <img src="images/sunglasses-1.jpg" alt="Retro Sunglasses" />
+              </a>
+            </div>
+            <h3 class="product-name">
+              <a href="product.html?id=4">Retro Street Sunglasses</a>
+            </h3>
+            <div class="product-price-row">
+              <span class="price-new">$55.00</span>
+              <span class="price-old">$60.00</span>
+            </div>
+            <p class="product-category">Accessories</p>
+            <div class="product-rating" aria-label="3.5 out of 5 stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⭐ RECOMMENDED / MOST VISITED SECTION (FILLED BY ML/POPULAR API) -->
+    <section class="section" id="recommended">
+      <div class="container">
+        <div class="section-header center">
+          <p class="section-subtitle">Because you viewed similar styles</p>
+          <h2 class="section-title">Most Visited Products</h2>
+        </div>
+
+        <!-- JS will inject popular products here from backend/products_list.php?mode=popular -->
+        <div class="products-grid" id="recommendedProducts">
+          <!-- dynamically loaded cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY STRIP -->
+    <section class="category-strip">
+      <div class="container categories-row">
+        <article class="category-card">
+          <img src="images/category-jackets.jpg" alt="Jackets" />
+          <div class="category-overlay">
+            <p class="category-count">461 styles</p>
+            <h3>Jackets & Outerwear</h3>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <img src="images/category-sweaters.jpg" alt="Sweaters" />
+          <div class="category-overlay red">
+            <p class="category-count">289 styles</p>
+            <h3>Cozy Knits & Sweaters</h3>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <img src="images/category-accessories.jpg" alt="Accessories" />
+          <div class="category-overlay">
+            <p class="category-count">345 pieces</p>
+            <h3>Modern Accessories</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container about-inner">
+        <div class="about-card">
+          <p class="section-subtitle">About Shahz&Ahd</p>
+          <h2 class="section-title">Designed for Real Life</h2>
+          <p>
+            Shahz&Ahd was created with one simple idea: clothes should be easy to wear, slow to fade,
+            and always feel like you. Every piece in our store is selected with comfort, fit and quality in mind.
+          </p>
+          <p>
+            From everyday basics to standout layers, we focus on timeless silhouettes, clean details
+            and fabrics that last beyond one season. No loud noise, just good style that works with your day.
+          </p>
+          <div class="about-author">
+            <p class="author-name">Shahzad & Ahad</p>
+            <p class="author-role">Co-Founders, Shahz&Ahd</p>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="images/about-girl.jpg" alt="About Shahz&Ahd brand" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <div class="section-header center">
+          <p class="section-subtitle">From our style journal</p>
+          <h2 class="section-title">Latest Stories & Tips</h2>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/blog-1.jpg" alt="How to build a simple everyday wardrobe" />
+            </div>
+            <div class="blog-body">
+              <h3>How to Build an Everyday Wardrobe That Works</h3>
+              <p class="blog-meta">IN LIFESTYLE • Nov 05, 2025</p>
+              <p class="blog-excerpt">
+                Learn how to mix key basics and statement pieces so getting dressed in the morning feels simple again.
+              </p>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/blog-2.jpg" alt="Layering outfits for any season" />
+            </div>
+            <div class="blog-body">
+              <h3>Smart Layering: One Outfit, Different Temperatures</h3>
+              <p class="blog-meta">IN TRENDS • Nov 05, 2025</p>
+              <p class="blog-excerpt">
+                Our quick guide to jackets, knits and tees that layer well – without feeling bulky or uncomfortable.
+              </p>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/blog-3.jpg" alt="Accessories that upgrade your look" />
+            </div>
+            <div class="blog-body">
+              <h3>Small Details, Big Impact: Accessories That Elevate</h3>
+              <p class="blog-meta">IN LIFESTYLE • Nov 05, 2025</p>
+              <p class="blog-excerpt">
+                Caps, shades, and small accents that instantly make a basic outfit feel more put-together.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP / LOCATION -->
+    <section class="section" id="location">
+      <div class="container">
+        <div class="section-header center">
+          <p class="section-subtitle">Visit our store</p>
+          <h2 class="section-title">Find Us on the Map</h2>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe
+            title="Store location on map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.8371941286705!2d72.68033919999999!3d32.0736519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392177bfd683f3d5%3A0xa8090086de867b9d!2sUniversity%20of%20Sargodha!5e0!3m2!1sen!2s!4v1763414631800!5m2!1sen!2s"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <p>© 2025 – Shahz&Ahd project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+<!-- coki -->
+ 
+<!-- ===== COOKIE POPUP (PASTE BEFORE </body>) ===== -->
+<style>
+  #cookiePopup{
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: #fff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+    border-radius: 12px !important;
+    max-width: 420px !important;
+    width: 90% !important;
+    padding: 16px !important;
+    z-index: 999999 !important;
+    display: none;
+    font-family: Arial, sans-serif !important;
+  }
+  #cookiePopup .cookie-content{ display:flex !important; gap:12px !important; align-items:flex-start !important; }
+  #cookiePopup .cookie-icon{ font-size:28px !important; line-height:1 !important; }
+  #cookiePopup .cookie-text strong{ display:block !important; font-size:16px !important; margin-bottom:4px !important; }
+  #cookiePopup .cookie-text p{ margin:0 !important; font-size:14px !important; color:#555 !important; }
+  #cookiePopup .cookie-text a{ color:#2563eb !important; text-decoration:none !important; }
+  #cookiePopup .cookie-actions{ margin-top:12px !important; display:flex !important; gap:10px !important; }
+  #cookiePopup .cookie-actions button{
+    flex:1 !important; padding:10px !important; border-radius:6px !important;
+    border:none !important; cursor:pointer !important; font-size:14px !important;
+  }
+  #cookieAccept{ background:#e63946 !important; color:#fff !important; }
+  #cookieDecline{ background:#e5e7eb !important; color:#333 !important; }
+</style>
+
+<div id="cookiePopup">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text">
+      <strong>Cookies Consent</strong>
+      <p>
+        This website uses cookies to help you have a better and more comfortable browsing experience.
+        <a href="privacy.html">Read more</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="cookie-actions">
+    <button id="cookieAccept">Accept</button>
+    <button id="cookieDecline">Decline</button>
+  </div>
+</div>
+
+<script>
+  // ===== SIMPLE COOKIE POPUP JS =====
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + days * 86400000);
+    document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + d.toUTCString() + "; path=/";
+  }
+
+  function getCookie(name) {
+    var parts = document.cookie.split("; ");
+    for (var i = 0; i < parts.length; i++) {
+      if (parts[i].indexOf(name + "=") === 0) return parts[i];
+    }
+    return null;
+  }
+
+  (function () {
+    var popup = document.getElementById("cookiePopup");
+    var acceptBtn = document.getElementById("cookieAccept");
+    var declineBtn = document.getElementById("cookieDecline");
+
+    // If popup not found, nothing to do
+    if (!popup || !acceptBtn || !declineBtn) return;
+
+    // Show only if no decision
+    if (!getCookie("cookie_consent")) {
+      popup.style.display = "block";
+    }
+
+    acceptBtn.addEventListener("click", function () {
+      setCookie("cookie_consent", "accepted", 365);
+      popup.style.display = "none";
+    });
+
+    declineBtn.addEventListener("click", function () {
+      setCookie("cookie_consent", "declined", 365);
+      popup.style.display = "none";
+    });
+  })();
+</script>
+<!-- ===== /COOKIE POPUP ===== -->
+
+
+</div>
+
+
+</body>
+</html>

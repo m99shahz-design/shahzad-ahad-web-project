@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login – Shahz&Ahd</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="page-wrapper auth-page">
+    <section class="section">
+      <div class="container auth-layout">
+
+        <div class="auth-card">
+          <h1 class="page-hero-title small">Admin Login</h1>
+          <p class="auth-subtitle">Restricted access for administrators only.</p>
+
+          <!-- IMPORTANT: points to backend/admin_auth.php -->
+          <form class="auth-form" method="POST" action="backend/admin_auth.php" autocomplete="off">
+
+            <div class="form-field">
+              <label for="adminEmail">Admin Email</label>
+              <input type="email" id="adminEmail" name="email" required />
+            </div>
+
+            <div class="form-field">
+              <label for="adminPassword">Password</label>
+              <input type="password" id="adminPassword" name="password" required />
+            </div>
+
+            <p id="adminLoginMessage" class="form-message"></p>
+
+            <button type="submit" class="btn btn-primary full-width">Login as Admin</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

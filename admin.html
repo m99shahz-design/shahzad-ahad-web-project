@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin – Garderobe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- You can reuse top bar / header if you want by copy-paste -->
+
+  <main class="page-wrapper">
+    <section class="section">
+      <div class="container">
+        <h1 class="page-hero-title small">Admin Panel</h1>
+        <p id="adminUserInfo" style="font-size:0.9rem;"></p>
+        <button id="adminLogout" class="btn btn-outline small" style="margin:0.7rem 0;">Logout</button>
+
+        <h2 class="section-title" style="font-size:1.1rem;margin-top:1.5rem;">Products</h2>
+
+        <form id="adminAddProduct" class="auth-form" style="max-width:480px;margin-top:1rem;">
+          <div class="form-field">
+            <label>Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="form-field">
+            <label>Price</label>
+            <input type="number" step="0.01" name="price" required />
+          </div>
+          <div class="form-field">
+            <label>Old Price (optional)</label>
+            <input type="number" step="0.01" name="old_price" />
+          </div>
+          <div class="form-field">
+            <label>Category</label>
+            <input type="text" name="category" />
+          </div>
+          <div class="form-field">
+            <label>Image path (e.g. images/cap-1.jpg)</label>
+            <input type="text" name="image" />
+          </div>
+          <button class="btn btn-primary small">Add Product</button>
+          <p id="adminProductMsg" style="font-size:0.85rem;margin-top:0.5rem;"></p>
+        </form>
+
+        <table class="cart-table" style="margin-top:2rem;">
+          <thead>
+            <tr>
+              <th>ID</th><th>Name</th><th>Price</th><th>Category</th><th>Image</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="adminProductsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Check admin
+    async function loadAdminInfo() {
+      const info = document.getElementById("adminUserInfo");
+      try {
+        const res = await fetch("backend/auth_me.php");
+        const data = await res.json();
+        if (!data.logged_in || data.role !== "admin") {
+          window.location.href = "login.html";
+          return;
+        }
+        info.textContent = "Logged in as " + data.name + " (Admin)";
+      } catch {
+        info.textContent = "Error loading user.";
+      }
+    }
+
+    async function loadProductsAdmin() {
+      const body = document.getElementById("adminProductsBody");
+      body.innerHTML = "<tr><td colspan='6'>Loading...</td></tr>";
+      const res = await fetch("backend/products_list.php");
+      const data = await res.json();
+      if (!data.success) {
+        body.innerHTML = "<tr><td colspan='6'>Error loading products.</td></tr>";
+        return;
+      }
+      body.innerHTML = "";
+      data.data.forEach((p) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${p.id}</td>
+          <td>${p.name}</td>
+          <td>$${p.price}</td>
+          <td>${p.category || ""}</td>
+          <td>${p.image || ""}</td>
+          <td>
+            <button data-id="${p.id}" class="admin-delete" style="font-size:0.8rem;">Delete</button>
+          </td>
+        `;
+        body.appendChild(tr);
+      });
+
+      document.querySelectorAll(".admin-delete").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          if (!confirm("Delete this product?")) return;
+          const id = btn.getAttribute("data-id");
+          const res = await fetch("backend/product_delete.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id }),
+          });
+          const data = await res.json();
+          alert(data.message);
+          loadProductsAdmin();
+        });
+      });
+    }
+
+    const addForm = document.getElementById("adminAddProduct");
+    if (addForm) {
+      addForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const msg = document.getElementById("adminProductMsg");
+        msg.textContent = "Saving...";
+        const body = {};
+        new FormData(addForm).forEach((v, k) => body[k] = v);
+        const res = await fetch("backend/product_create.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+        const data = await res.json();
+        msg.style.color = data.success ? "green" : "#e63946";
+        msg.textContent = data.message;
+        if (data.success) {
+          addForm.reset();
+          loadProductsAdmin();
+        }
+      });
+    }
+
+    const logoutBtn = document.getElementById("adminLogout");
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", async () => {
+        await fetch("backend/auth_logout.php");
+        window.location.href = "index.html";
+      });
+    }
+
+    loadAdminInfo();
+    loadProductsAdmin();
+  </script>
+</body>
+</html>

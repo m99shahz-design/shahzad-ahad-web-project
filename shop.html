@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Garderobe</title>
+
+  <!-- SAME FONT + ICONS + CSS AS index.html -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Accessibility: skip link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Back to top button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Accessibility floating icon -->
+  <button class="accessibility-icon" aria-label="Accessibility icon">
+    <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+  </button>
+
+  <!-- TOP BAR (same as index.html) -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <p>Don't miss our <a href="#">holiday offer</a> – up to <strong>50% OFF!</strong></p>
+      <div class="top-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER (same as index.html) -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">
+          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        </span>
+        <span class="logo-text">Shahz&Ahd</span>
+      </div>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+  <a href="index.html" class="nav-home">Home</a>
+  <a href="shop.html" class="nav-products active">Products</a>
+  <a href="about.html" class="nav-about">About Us</a>
+  <a href="news.html" class="nav-news">News</a>
+
+  <a href="contact.html" class="nav-contact">Contact</a>
+</nav>
+
+      <div class="header-actions">
+
+        <!-- SEARCH BAR WITH ICON (EXPANDS) -->
+        <div class="header-search" role="search">
+          <button class="icon-btn header-search-toggle" aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <form class="header-search-form">
+            <input
+              type="search"
+              placeholder="Search products..."
+              aria-label="Search products" />
+          </form>
+        </div>
+
+        <!-- LOGIN REDIRECT -->
+        <a href="login.html" class="icon-btn" title="Login" aria-label="Login">
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <!-- WISHLIST -->
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <!-- CART REDIRECT -->
+        <a href="cart.html" class="icon-btn cart-btn" title="Cart" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrapper shop-page" id="mainContent">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-subtitle">All products</p>
+        <h1 class="page-hero-title">Shop</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container shop-layout">
+        <!-- SIDEBAR FILTERS -->
+        <aside class="shop-sidebar">
+          <div class="shop-widget">
+            <h3 class="shop-widget-title">Search</h3>
+            <form class="shop-search">
+              <input type="text" placeholder="Search products..." />
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </div>
+
+          <div class="shop-widget">
+            <h3 class="shop-widget-title">Categories</h3>
+            <ul class="shop-list">
+              <li><a href="#">All</a></li>
+              <li><a href="#">Jackets</a></li>
+              <li><a href="#">Sweaters</a></li>
+              <li><a href="#">T-Shirts</a></li>
+              <li><a href="#">Sneakers</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+
+          <div class="shop-widget">
+            <h3 class="shop-widget-title">Price</h3>
+            <div class="price-filter">
+              <input type="range" min="0" max="200" value="100" />
+              <div class="price-values">
+                <span>$0</span>
+                <span>$200</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-widget">
+            <h3 class="shop-widget-title">Tags</h3>
+            <div class="shop-tags">
+              <a href="#">men</a>
+              <a href="#">women</a>
+              <a href="#">new</a>
+              <a href="#">sale</a>
+              <a href="#">winter</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- PRODUCTS GRID -->
+        <section class="shop-products">
+          <div class="shop-toolbar">
+            <p>Showing 1–8 of 32 products</p>
+            <select>
+              <option>Default sorting</option>
+              <option>Sort by price: low to high</option>
+              <option>Sort by price: high to low</option>
+              <option>Sort by latest</option>
+            </select>
+          </div>
+
+          <!-- added id, kept everything else the same -->
+          <div class="products-grid" id="shopProductsGrid">
+            <!-- Reuse your product-card markup from index.html -->
+            <article class="product-card">
+              <span class="badge badge-sale">Sale</span>
+              <div class="product-image">
+                <!-- UPDATED: id=1 -->
+                <a href="product.html?id=1">
+                  <img src="images/cap-1.jpg" alt="Snapback Cap" />
+                </a>
+              </div>
+              <h3 class="product-name">
+                <a href="product.html?id=1">Snapback Cap</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="price-new">$30.00</span>
+                <span class="price-old">$45.00</span>
+              </div>
+              <p class="product-category">Accessories</p>
+              <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <!-- UPDATED: id=2 -->
+                <a href="product.html?id=2">
+                  <img src="images/shoes-1.jpg" alt="Gray Shoes" />
+                </a>
+              </div>
+              <h3 class="product-name">
+                <a href="product.html?id=2">Gray Shoes</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="price-new">$50.00</span>
+              </div>
+              <p class="product-category">Sneakers</p>
+              <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+            </article>
+
+            <article class="product-card">
+              <span class="badge badge-sale">Sale</span>
+              <div class="product-image">
+                <!-- UPDATED: id=3 -->
+                <a href="product.html?id=3">
+                  <img src="images/tshirt-1.jpg" alt="Black T-shirt" />
+                </a>
+              </div>
+              <h3 class="product-name">
+                <a href="product.html?id=3">Black T-shirt</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="price-new">$50.00</span>
+                <span class="price-old">$80.00</span>
+              </div>
+              <p class="product-category">T-Shirts</p>
+              <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+            </article>
+
+            <article class="product-card">
+              <span class="badge badge-sale">Sale</span>
+              <div class="product-image">
+                <!-- UPDATED: id=4 -->
+                <a href="product.html?id=4">
+                  <img src="images/sunglasses-1.jpg" alt="Retro Sunglasses" />
+                </a>
+              </div>
+              <h3 class="product-name">
+                <a href="product.html?id=4">Retro Sunglasses</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="price-new">$55.00</span>
+                <span class="price-old">$60.00</span>
+              </div>
+              <p class="product-category">Accessories</p>
+              <button class="btn btn-primary small add-cart-btn">Add to cart</button>
+            </article>
+
+            <!-- duplicate more cards as needed -->
+          </div>
+
+          <div class="shop-pagination">
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link">Next »</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (same as index.html) -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <p>© 2025 – Shahzad project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
